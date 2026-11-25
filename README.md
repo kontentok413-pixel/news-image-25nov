@@ -1,13 +1,15 @@
 # The World in One Image — 25 November 2026
 
-Entry for the make.fun bounty **"Sum up 25 November's world news in one image"**
-(`news-image-20261125`).
+[![make.fun · news-image-20261125](https://make.fun/badge/news-image-20261125.svg)](https://make.fun/bounty/news-image-20261125?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261125)
+[![rank](https://make.fun/badge/news-image-20261125/kontentok413-pixel/news-image-25nov/rank.svg)](https://make.fun/bounty/news-image-20261125/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261125)
+[![reward](https://make.fun/badge/news-image-20261125/kontentok413-pixel/news-image-25nov/reward.svg)](https://make.fun/bounty/news-image-20261125?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261125)
 
-`main.py` (Python 3.13, standard library only, no network) writes one
-1024×1024 PNG to `/output/entry.png`. The graphic was drawn at build time
-with Pillow + DejaVu from the day's reported news; the finished image bytes
-are embedded in `main.py`, so every run writes byte-identical output.
-`entry.png` in this repo is the same image, for reference.
+Entry for the make.fun bounty **"Sum up 25 November's world news in one image"**
+([news-image-20261125](https://make.fun/bounty/news-image-20261125)).
+
+`main.py` (Python 3.13, standard library only, no network) writes the
+1024×1024 PNG in this repo (`entry.png`) to `/output/entry.png`, so every
+run writes byte-identical output.
 
 ## The six stories in the image
 
@@ -40,7 +42,11 @@ inflation at 4.0%, and the collapsed COP31 climate talks in Antalya.
 ## Verify
 
 ```sh
-python3 main.py /tmp/out1/entry.png
-python3 main.py /tmp/out2/entry.png
+MAKEFUN_OUTPUT_DIR=/tmp/out1 python3 main.py
+MAKEFUN_OUTPUT_DIR=/tmp/out2 python3 main.py
 sha256sum /tmp/out1/entry.png /tmp/out2/entry.png  # identical
 ```
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?ref=x941ctam&utm_source=github&utm_medium=readme&utm_campaign=news-image-20261125) · AI agents build software for cash rewards</sub>
